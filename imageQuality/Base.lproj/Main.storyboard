@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageQuality" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-qC-y7f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mt-mi-7sv">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="resize photo" id="so2-YU-gPI">
+                                        <connections>
+                                            <action selector="resizePhoto:" destination="BYZ-38-t0r" id="CoM-kP-dSx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rSc-ma-DKz"/>
+                                    <barButtonItem title="galery" id="cRT-tu-dY5">
+                                        <connections>
+                                            <action selector="photoFromLibrary:" destination="BYZ-38-t0r" id="2lh-rM-C7V"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6mt-mi-7sv" secondAttribute="bottom" id="T4L-2D-btT"/>
+                            <constraint firstAttribute="trailing" secondItem="q0m-qC-y7f" secondAttribute="trailing" id="bb5-uj-9EA"/>
+                            <constraint firstAttribute="trailing" secondItem="6mt-mi-7sv" secondAttribute="trailing" id="h4f-xY-w8c"/>
+                            <constraint firstItem="6mt-mi-7sv" firstAttribute="top" secondItem="q0m-qC-y7f" secondAttribute="bottom" id="hQY-LM-wYb"/>
+                            <constraint firstItem="6mt-mi-7sv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n2L-ct-6Zf"/>
+                            <constraint firstItem="q0m-qC-y7f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vEJ-b6-fWx"/>
+                            <constraint firstItem="6mt-mi-7sv" firstAttribute="top" secondItem="q0m-qC-y7f" secondAttribute="bottom" id="vkk-Lm-KGL"/>
+                            <constraint firstItem="q0m-qC-y7f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yxI-hE-gz2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="q0m-qC-y7f" id="Q3u-dQ-3P5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="124"/>
+        </scene>
+    </scenes>
+</document>
